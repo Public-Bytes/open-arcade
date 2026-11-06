@@ -1,21 +1,59 @@
-# Open Arcade · Video Studio
+<p align="center">
+  <img src="public/icons/128.png" width="96" height="96" alt="Open Arcade icon">
+</p>
 
-A free, open-source Chrome tab recorder and local video editor. Continuous footage, smooth automatic zoom and pan, a large animated cursor, backgrounds, microphone and tab audio, webcam overlays, trimming, speed, text, and local MP4/GIF export. No account, backend, subscription, watermark, telemetry, API key, or remote code.
+<h1 align="center">Open Arcade</h1>
 
-This is a video studio. The former interactive-tour editor is no longer the app's interface.
+<p align="center"><strong>Record your browser. Make a video worth sharing.</strong></p>
 
-## Install
+<p align="center">
+  A free, open-source Chrome tab recorder and local video studio.<br>
+  Automatic zooms, a smooth cursor, and editing tools, right in your browser.
+</p>
 
-Requires Node.js 22.12+ and Chrome 130+.
+<p align="center">
+  <a href="#get-started">Get started</a> ·
+  <a href="#what-you-can-make">Features</a> ·
+  <a href="#record-and-edit">How it works</a> ·
+  <a href="#development-and-verification">Develop</a> ·
+  <a href="#license">License</a>
+</p>
+
+---
+
+Record a product walkthrough, a tutorial, or a quick demo without stitching together screenshots. Open Arcade captures one Chrome tab as continuous video, then opens it in an editor with automatic zooms around your clicks.
+
+**No account. No subscription. No watermark.** Projects and media stay in your Chrome profile, and exports are made locally. See [Privacy](PRIVACY.md) for details.
+
+## What you can make
+
+| Record | Edit | Export |
+| --- | --- | --- |
+| Capture a Chrome tab with optional tab audio, microphone, and webcam. | Refine automatic zooms and cursor movement, trim or cut clips, add text and privacy covers, and adjust speed and backgrounds. | Export an MP4 with audio or a silent GIF. Save an editable project backup for later. |
+
+- **Guide the eye.** Automatic zooms follow click clusters. Reframe or add zooms on the timeline, and customize the animated cursor.
+- **Make it yours.** Arrange the webcam bubble, captions, and privacy covers directly on the preview.
+- **Keep working locally.** Import MP4s, WebM files, images, and supported Open Arcade projects. Imported videos do not include a recorded cursor path.
+- **Try before recording.** The workspace includes an example video and cursor track under **Try the editor**.
+
+## Get started
+
+You will need Node.js 22.12 or later and Chrome 130 or later.
 
 ```sh
+git clone https://github.com/gitcommit90/open-arcade.git
+cd open-arcade
 npm ci
 npm run build
 ```
 
-Open `chrome://extensions`, enable **Developer mode**, choose **Load unpacked**, and select `dist/`. Pin **Open Arcade — Video Studio**. After rebuilding, use the extension's **Reload** button there and reopen its workspace.
+1. Open `chrome://extensions` in Chrome and turn on **Developer mode**.
+2. Choose **Load unpacked** and select the `dist/` folder.
+3. Pin **Open Arcade — Video Studio**, open a website, and start recording.
 
-The ready-to-install archive is `release/open-arcade-0.5.0.zip`; unzip it and load the extracted folder. `release/open-arcade-0.5.0-source.zip` includes the source and build instructions. Chrome Web Store publication is a separate distribution step.
+After rebuilding, reload the extension on `chrome://extensions` and reopen its workspace. Chrome Web Store publication is a separate distribution step.
+
+> **Local projects need backups.** Clearing extension storage or uninstalling the extension deletes local work. Save important projects as editable backups. Backups contain original media, including material hidden by trims or privacy covers; share a rendered export when that material must not be included.
 
 ## Record and edit
 
