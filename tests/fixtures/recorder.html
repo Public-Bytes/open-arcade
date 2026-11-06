@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Recorder test product</title>
+    <style>
+      body {
+        margin: 0;
+        font: 18px Arial;
+        color: #213f2d;
+        background: #f6f8ef;
+      }
+      header {
+        background: #254831;
+        color: #fff;
+        padding: 35px;
+      }
+      main {
+        padding: 50px;
+      }
+      button,
+      input {
+        font: inherit;
+        padding: 15px;
+        margin: 15px;
+      }
+      article {
+        padding: 40px;
+        background: #e4edd7;
+        margin: 30px 0;
+        min-height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Recorder test product</h1></header>
+    <main>
+      <button
+        id="change"
+        onclick="document.querySelector('h1').textContent='A new view';document.querySelector('header').style.background='#b53034'"
+      >
+        Open project</button
+      ><input aria-label="Project name" placeholder="Project name" /><a
+        href="fixture.html?next=1"
+        >Navigate to another page</a
+      >
+      <article>Scroll to explore your product</article>
+      <article>More product details</article>
+      <article>Your final destination</article>
+    </main>
+  </body>
+</html>
